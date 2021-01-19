@@ -5,10 +5,11 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Accordion, AccordionDetails, AccordionSummary, FormControl, FormControlLabel, FormHelperText, FormLabel, RadioGroup } from '@material-ui/core';
+import { Accordion, AccordionDetails, AccordionSummary, FormControl, FormControlLabel, FormHelperText, FormLabel, Menu, MenuItem, RadioGroup } from '@material-ui/core';
 import Radio from '@material-ui/core/Radio';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import Hidden from '@material-ui/core/Hidden';
+import FilterListIcon from '@material-ui/icons/FilterList';
 
 const useStyles = makeStyles({
   root: {
@@ -31,11 +32,26 @@ export default function OutlinedCard() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
   const [value, setValue] = React.useState('female');
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
 
   const handleChange = (event) => {
     setValue(event.target.value);
   };
+  
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
+    <>
+    <div>
+      <Hidden only={["xs"]}>
     <Card className={classes.root} variant="outlined" style={{backgroundColor:"black",width:"60%", marginLeft:"20%"}}>
       <CardContent>
           <div> 
@@ -98,5 +114,26 @@ export default function OutlinedCard() {
       </CardContent>
      
     </Card>
+    </Hidden>
+</div>
+
+<Hidden only={["lg"]} >
+<Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+<FilterListIcon/>
+</Button>
+<Menu
+id="simple-menu"
+anchorEl={anchorEl}
+keepMounted
+open={Boolean(anchorEl)}
+onClose={handleClose}
+>
+<MenuItem onClick={handleClose}>Profile</MenuItem>
+<MenuItem onClick={handleClose}>My account</MenuItem>
+<MenuItem onClick={handleClose}>Logout</MenuItem>
+</Menu> 
+</Hidden>
+
+</>
   );
 }
