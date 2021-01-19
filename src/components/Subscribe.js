@@ -53,7 +53,7 @@ export default function CTA(props) {
             <Grid item xs={12} md={6}>
               <Box display="flex" height="100%" className={classes.actions}>
                 <Box my="auto">
-                  <input className={classes.primaryAction}  placeholder="Enroll your name" style={{height:"50px",borderRadius:"50px",width:"300px"}} />
+                  <input className={classes.primaryAction}  placeholder="Enroll your name" style={{height:"50px",borderRadius:"50px"}} />
 
                   <Button variant="outlined" color="secondary" style={{height:"50px",borderRadius:"50px",backgroundColor:"gold",color:"black"}}>{content['secondary-action']}</Button>
                 </Box>

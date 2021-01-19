@@ -119,7 +119,7 @@ export default function OutlinedCard() {
 
 <Hidden only={["lg"]} >
 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-<FilterListIcon/>
+<FilterListIcon/>FILTER
 </Button>
 <Menu
 id="simple-menu"
@@ -128,9 +128,68 @@ keepMounted
 open={Boolean(anchorEl)}
 onClose={handleClose}
 >
-<MenuItem onClick={handleClose}>Profile</MenuItem>
-<MenuItem onClick={handleClose}>My account</MenuItem>
-<MenuItem onClick={handleClose}>Logout</MenuItem>
+<Card className={classes.root} variant="outlined" style={{backgroundColor:"black",width:"100%"}}>
+      <CardContent>
+          <div> 
+      <h1 style={{color:"gold",textAlign:"center"}}>Filter</h1>
+      </div>
+      <FormControl component="fieldset" style={{color:"gold"}}>
+      <FormLabel component="legend" style={{color:"gold"}} >Quility</FormLabel>
+      <RadioGroup aria-label="Quility" name="Quility1" value={value} onChange={handleChange} style={{}}>
+        <FormControlLabel value="Low" control={<Radio />} label="Low" />
+        <FormControlLabel value="Medium" control={<Radio />} label="Medium" />
+        <FormControlLabel value="High" control={<Radio />} label="High" />
+      </RadioGroup>
+      <FormLabel component="legend" style={{color:"gold"}} >Color</FormLabel>
+      <RadioGroup aria-label="Color" name="Color" value={value} onChange={handleChange} style={{marginLeft:"5%"}}>
+        <FormControlLabel value="red" control={<Radio />} label="red" />
+        <FormControlLabel value="black" control={<Radio />} label="black" />
+        <FormControlLabel value="white" control={<Radio />} label="white" />
+        <FormControlLabel value="gray" control={<Radio />} label="gray" />
+        <FormControlLabel value="purple" control={<Radio />} label="purple" />
+        <FormControlLabel value="orange" control={<Radio />} label="orange" />
+        <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          
+         style={{height:"30px",backgroundColor:"gold",color:"black"}}>
+          <Typography >More</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          <RadioGroup aria-label="Color" name="Color" value={value} onChange={handleChange} style={{marginLeft:"5%"}}>
+        <FormControlLabel value="red" control={<Radio />} label="red" />
+        <FormControlLabel value="black" control={<Radio />} label="black" />
+        <FormControlLabel value="white" control={<Radio />} label="white" />
+        <FormControlLabel value="gray" control={<Radio />} label="gray" />
+        <FormControlLabel value="purple" control={<Radio />} label="purple" />
+        <FormControlLabel value="orange" control={<Radio />} label="orange" />
+        </RadioGroup>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      
+      
+      </RadioGroup>
+
+      <FormLabel component="legend" style={{color:"gold",paddingTop:"20px"}} >Surface Type</FormLabel>
+      <FormLabel component="legend" style={{color:"gold",paddingTop:"20px"}} >Polished</FormLabel>
+
+      <RadioGroup aria-label="Quility" name="Quility1" value={value} onChange={handleChange} style={{marginLeft:"5%"}}>
+        <FormControlLabel value="Honed Finesh" control={<Radio />} label="Honed Finesh" />
+        <FormControlLabel value="Leather Finesh" control={<Radio />} label="Leather Finesh" />
+        <FormControlLabel value="Flamed Finesh" control={<Radio />} label="Flamed Finesh" />
+        <FormControlLabel value="Bush Hammered Finesh" control={<Radio />} label="Bush Hammered Finesh" />
+      </RadioGroup>
+      <FormLabel component="legend" style={{color:"gold",paddingTop:"20px"}} ></FormLabel>
+      <RadioGroup aria-label="Quility" name="Quility1" value={value} onChange={handleChange} >
+        <FormControlLabel value="Non-Polished" control={<Radio />} label="Non-Polished" />
+      
+      </RadioGroup>
+    </FormControl>
+      </CardContent>
+     
+    </Card>
 </Menu> 
 </Hidden>
 
