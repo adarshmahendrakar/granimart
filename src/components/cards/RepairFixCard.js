@@ -41,7 +41,7 @@ export default function RepairFixCard() {
   const classes = useStyles();
     const data=[1,2,3,4]
   return (
-    <div className={classes.root} style={{marginTop:"50px"}}>
+    <div className={classes.root} >
         <Card style={{boxShadow:"5px 10px 0 0px gray",border:"1px solid black"}}>
         <div className={classes.button}>
       <Button variant="contained" >

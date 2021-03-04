@@ -299,7 +299,7 @@
 }
 
 .box+.box {
-    border-left: .2rem solid white ;
+    border-left: .15rem solid white ;
 }
 .bgred{
   background-color: red;

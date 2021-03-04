@@ -23,8 +23,8 @@ export default function ProductVedioCard() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
-      <CardActionArea>
+    <Card className={classes.root} >
+      
       <Typography gutterBottom variant="h4" component="h2" style={{textAlign:"center"}}>
            Company Name
           </Typography>
@@ -70,7 +70,7 @@ export default function ProductVedioCard() {
       </ButtonGroup>
         </CardContent>
         
-      </CardActionArea>
+    
             
       
      

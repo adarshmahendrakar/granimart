@@ -51,7 +51,7 @@ export default function OutlinedCard() {
   return (
     <>
     <div>
-      <Hidden only={["xs"]}>
+      <Hidden only={["xs","sm"]}>
     <Card className={classes.root} variant="outlined" style={{backgroundColor:"black",width:"60%", marginLeft:"20%"}}>
       <CardContent>
           <div> 
@@ -117,7 +117,7 @@ export default function OutlinedCard() {
     </Hidden>
 </div>
 
-<Hidden only={["lg"]} >
+<Hidden only={["lg","md"]} >
 <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
 <FilterListIcon/>FILTER
 </Button>

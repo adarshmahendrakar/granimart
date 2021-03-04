@@ -12,7 +12,6 @@ const styles = {
     padding: 15,
     minHeight: 260,
     color: "#fff"
-    
   },
   slide1: {
     backgroundColor: "#FEA900"

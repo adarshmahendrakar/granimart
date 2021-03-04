@@ -19,20 +19,23 @@ export default function ProductPage() {
         <Box mb={4}/>
 
 
-            <ProductTabs/>
+            {/* <ProductTabs/> */}
+
             <ProductChips/>
 
 
-        <Grid container spacing={3}>
-                <Grid item xs={4}>
+
+
+        <Grid container spacing={2}>
+                <Grid item xs={12} lg={3} md={3} >
                     <SideLeft/>
-                </Grid>
-             <Grid item xs={8}>
+                </Grid> 
+             <Grid item xs={12} lg={9} md={9}>
                     <ProductCard/>
             </Grid>
         </Grid>
 
-            <Subscribe/>
+          
             
             
         </>

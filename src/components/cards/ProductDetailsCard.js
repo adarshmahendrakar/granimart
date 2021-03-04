@@ -51,7 +51,7 @@ export default function ProductDetailsCard() {
                   <b>Company Name</b>
                 </Typography>
                {/* <ProductRating/> */}
-                <Button variant="contained"  color="primary">
+                <Button variant="contained"  color="primary" style={{backgroundColor:"blue",color:"white"}}> 
                 <PhoneAndroidIcon/>
                     Contact
                 </Button>

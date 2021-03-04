@@ -20,7 +20,7 @@ function ProductDetails(){
 
         <>
          <Grid container spacing={2}>
-                <Grid item xs={12} md={8} lg={9} style={{}}>
+                <Grid item xs={12} md={8} lg={12} style={{}}>
         <div style={{color:"black",padding:"10px"}}>
         <Typography style={{color:"black",padding:"10px"}}>Type :<b>  Granite </b></Typography>
         <Typography style={{color:"black",padding:"10px"}}>Color : <b> White </b></Typography>

@@ -41,12 +41,7 @@ const useStyles = makeStyles((theme) => ({
 function Reviews(){
   return(
       <>
-     <Card>
-  
-    
-       
-        
-             
+     <Card>      
       <Paper  elevation={10} style={{}}>
         <Grid container spacing={2}  style={{}}>
           <Grid item>
@@ -68,6 +63,10 @@ function Reviews(){
                
               
               </Grid>
+
+              <Typography  variant="subtitle1" >
+                  See More
+                </Typography>
               
             </Grid>
            
@@ -77,14 +76,6 @@ function Reviews(){
         </Grid>
         
       </Paper>
-
-     
-         
-         
-            
-        
-           
-         
                </Card>
       </>
   );
@@ -98,8 +89,9 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
+      return "";
+    case 1:
       return <Reviews/>;
-   
 
     default:
       return "";
@@ -112,10 +104,10 @@ export default function ServiceManCard() {
   const steps = getSteps();
 
   const handleNext = () => {
-    setActiveStep((prevActiveStep) => (prevActiveStep = 0));
+    setActiveStep((prevActiveStep) => (prevActiveStep = 1));
   };
   const handleClose = () => {
-    setActiveStep(null);
+    setActiveStep((prevActiveStep) => (prevActiveStep = 0));
   }
 
   
@@ -174,13 +166,13 @@ export default function ServiceManCard() {
         <b>CHOOSE</b>
       </Button>
       </div>
-      <div  >
+      <div>
        <Button
         variant="contained"
         onClick={handleNext}
-        onClose={handleClose}
+        
         style={{border:"1px solid black",backgroundColor:"goldenrod",color:"black",width:"100%",height:"30px"}} >
-        <b onClose={handleClose}>Reviews</b>
+        <b>Reviews</b>
       </Button>
       </div>
       
@@ -194,12 +186,6 @@ export default function ServiceManCard() {
       </Paper>
 
          ))}
-         
-         
-            
-        
-           
-         
                </Card>
               
     </div>

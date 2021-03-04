@@ -9,19 +9,19 @@ const theme = createMuiTheme({
             "header": "#121037"
         },
         "text": {
-            "primary": "#1A237E",
-            "secondary": "#5C6BC0",
+            "primary": "#000",
+            "secondary": "#aaa",
             "hint": "#9FA8DA"
         },
         "primary": {
-            "main": "#304FFE",
-            "light": "#536DFE",
-            "dark": "#1A237E"
+            "main": "#000",
+            "light": "#333333",
+            "dark": "#00000"
         },
         "secondary": {
-            "main": "#FFAB00",
-            "light": "#ffd740",
-            "dark": "#ff8f00"
+            "main": "#ffc400",
+            "light": "#ffcf33",
+            "dark": "#b28900"
         },
         "contrastThreshold": 1.8
     },

@@ -25,7 +25,7 @@ const useStyles = makeStyles({
 export default function ProductCard() {
   const classes = useStyles();
   const bull = <span className={classes.bullet}>•</span>;
-  const data = [1, 2, 3, 4, 5,6,7, 10,11,12,13,1, 2, 3, 4, 5,6,7, 10,11,12,13,];
+  const data = [1, 2, 3, 4, 5];
   return (
     <>
     
@@ -34,10 +34,10 @@ export default function ProductCard() {
           <div>
             <Grid
               item
-              xs={4}
+              xs={3}
               justifyContent="center"
               spacing={3}
-              style={{ padding: "15px", justifyContent: "center" }}
+              style={{ padding: "10px", justifyContent: "center" }}
             >
               <Card
                 className={classes.root}
@@ -45,7 +45,7 @@ export default function ProductCard() {
                 justifyContent="center"
                 style={{
                   border: "4px solid gray",
-                  width: "165px",
+                  width: "155px",
                   height: "195px"
                 }}
               >
@@ -55,7 +55,7 @@ export default function ProductCard() {
                   justifyContent="center"
                   style={{
                     border: "2px solid white",
-                    width: "165px",
+                    width: "155px",
                     height: "195px"
                   }}
                 ></Avatar>

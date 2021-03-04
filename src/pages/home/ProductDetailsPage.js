@@ -18,11 +18,11 @@ export default function ProductPage() {
 
 
         <Grid container spacing={2}>
-                <Grid item xs={10} lg={5} style={{marginLeft:"5%"}}>
+                <Grid item xs={12} lg={5} style={{marginLeft:"5%"}}>
                 <ProductUpperLayout/>
                 </Grid>
                 
-             <Grid item xs={10} lg={5}style={{marginLeft:"5%"}}>
+             <Grid item xs={12} lg={5}style={{marginLeft:"5%"}}>
                 <ProductUpperRight/>
             </Grid>
         </Grid>
@@ -30,15 +30,14 @@ export default function ProductPage() {
 
 
         <Grid container spacing={2}>
-                <Grid item xs={10} lg={5} style={{marginLeft:"5%"}}>
+                <Grid item xs={12} lg={5} style={{marginLeft:"5%"}}>
                 <ProductDetailsCard/>
                 </Grid>
-             <Grid item xs={10} lg={5} style={{margin:"5%",padding:"2%"}}>
+             <Grid item xs={12} lg={5} style={{margin:"5%",padding:"2%"}}>
              <ProductVedioCard/>
             </Grid>
         </Grid>
 
-            <Subscribe/>
             
             
         </>
